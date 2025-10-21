@@ -193,18 +193,53 @@ class DataLoader {
     `).join('');
   }
 
+  // populateContact() {
+  //   const contactInfo = document.getElementById('contactInfo');
+  //   if (!contactInfo || !this.data.siteInfo) return;
+  
+  //   const contact = this.data.siteInfo.contact;
+  //   contactInfo.innerHTML = `
+  //     <h2>${contact.title}</h2>
+  //     <p>${contact.description}</p>
+  //     <div class="contact-details">
+  //       ${contact.details.map(detail => {
+  //         // Create proper clickable links based on the type
+  //         let link = detail.value;
+  //         let href = '';
+          
+  //         if (detail.label === 'Email') {
+  //           href = `mailto:${detail.value}`;
+  //         } else if (detail.label === 'LinkedIn') {
+  //           href = detail.value.startsWith('http') ? detail.value : `https://${detail.value}`;
+  //         } else if (detail.label === 'Location') {
+  //           href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(detail.value)}`;
+  //         }
+          
+  //         return `
+  //           <div class="contact-item">
+  //             <span class="contact-icon">${detail.icon}</span>
+  //             <div>
+  //               <strong>${detail.label}</strong>
+  //               <p><a href="${href}" class="contact-link" target="_blank" rel="noopener noreferrer">${detail.value}</a></p>
+  //             </div>
+  //           </div>
+  //         `;
+  //       }).join('')}
+  //     </div>
+  //   `;
+  // }
+
   populateContact() {
     const contactInfo = document.getElementById('contactInfo');
     if (!contactInfo || !this.data.siteInfo) return;
   
     const contact = this.data.siteInfo.contact;
+    
     contactInfo.innerHTML = `
       <h2>${contact.title}</h2>
       <p>${contact.description}</p>
       <div class="contact-details">
         ${contact.details.map(detail => {
-          // Create proper clickable links based on the type
-          let link = detail.value;
           let href = '';
           
           if (detail.label === 'Email') {
@@ -212,7 +247,7 @@ class DataLoader {
           } else if (detail.label === 'LinkedIn') {
             href = detail.value.startsWith('http') ? detail.value : `https://${detail.value}`;
           } else if (detail.label === 'Location') {
-            href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(detail.value)}`;
+            href = '#';
           }
           
           return `
@@ -220,7 +255,12 @@ class DataLoader {
               <span class="contact-icon">${detail.icon}</span>
               <div>
                 <strong>${detail.label}</strong>
-                <p><a href="${href}" class="contact-link" target="_blank" rel="noopener noreferrer">${detail.value}</a></p>
+                <p>
+                  ${href !== '#' 
+                    ? `<a href="${href}" class="contact-link" target="_blank" rel="noopener noreferrer">${detail.value}</a>`
+                    : `<span class="contact-text">${detail.value}</span>`
+                  }
+                </p>
               </div>
             </div>
           `;
