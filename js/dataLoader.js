@@ -110,28 +110,57 @@ class DataLoader {
     }
   }
 
+  // populatePortfolio() {
+  //   const portfolioList = document.getElementById('portfolioList');
+  //   if (!portfolioList || !this.data.portfolio) return;
+
+  //   portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
+  //     <li class="splide__slide">
+  //       <div class="portfolio-item">
+  //         <div class="portfolio-image" style="background-image: url('${project.image}')">
+  //           <div class="portfolio-placeholder">${project.title}</div>
+  //         </div>
+  //         <div class="portfolio-overlay">
+  //           <h3>${project.category}</h3>
+  //           <p>${project.description}</p>
+  //           <div class="portfolio-tags">
+  //             ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+  //           </div>
+  //           <a href="${project.url}" class="portfolio-link">View Project →</a>
+  //         </div>
+  //       </div>
+  //     </li>
+  //   `).join('');
+  // }
+
+
+
   populatePortfolio() {
     const portfolioList = document.getElementById('portfolioList');
     if (!portfolioList || !this.data.portfolio) return;
-
+  
     portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
       <li class="splide__slide">
         <div class="portfolio-item">
           <div class="portfolio-image" style="background-image: url('${project.image}')">
             <div class="portfolio-placeholder">${project.title}</div>
           </div>
-          <div class="portfolio-overlay">
-            <h3>${project.category}</h3>
-            <p>${project.description}</p>
-            <div class="portfolio-tags">
-              ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          <div class="portfolio-content">
+            <div>
+              <span class="portfolio-category">${project.category}</span>
+              <h3 class="portfolio-title">${project.title}</h3>
+              <p class="portfolio-description">${project.description}</p>
+              <div class="portfolio-tags">
+                ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
             </div>
-            <a href="${project.url}" class="portfolio-link">View Project →</a>
+            <a href="${project.url}" class="portfolio-link">View Project Details</a>
           </div>
         </div>
       </li>
     `).join('');
   }
+
 
   populateProcess() {
     const processTimeline = document.getElementById('processTimeline');
