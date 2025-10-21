@@ -1,0 +1,38 @@
+:root {
+  /* Brand Colors */
+  --primary-color: #0066CC;
+  --secondary-color: #00D4FF;
+  --accent-color: #4DD0E1;
+  --dark-bg: #0A1929;
+  --darker-bg: #050D18;
+  --light-text: #FFFFFF;
+  --gray-text: #B0BEC5;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  
+  --font-size-hero: 4rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 1.75rem;
+  --font-size-body: 1.1rem;
+  
+  /* Spacing */
+  --section-padding: 100px;
+  --container-max-width: 1200px;
+  
+  /* Effects */
+  --glass-bg: rgba(10, 25, 41, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --transition-speed: 0.3s;
+  --hover-lift: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --section-padding: 60px;
+  }
+}
