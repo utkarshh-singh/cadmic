@@ -60,11 +60,32 @@ body {
   align-items: center;
 }
 
+/* Logo Styles */
 .logo {
   text-decoration: none;
   font-family: var(--font-heading);
   font-size: 1.8rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--transition-speed);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  transition: all var(--transition-speed);
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+}
+
+.logo:hover .logo-image {
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+  transform: scale(1.05);
 }
 
 .logo-text {
@@ -74,7 +95,20 @@ body {
 .logo-dot {
   color: var(--secondary-color);
   font-size: 2rem;
+  line-height: 1;
 }
+
+/* Responsive logo adjustments */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 32px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
 
 .nav-links {
   display: flex;
