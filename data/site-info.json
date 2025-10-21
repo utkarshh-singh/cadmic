@@ -6,17 +6,8 @@
     "tagline": "Academic Web Design Specialists",
     "location": "Ottawa, Canada",
     "email": "info.cadmic@gmail.com",
-    "linkedin": "https://www.linkedin.com/company/cadmic/",
+    "linkedin": "https://ca.linkedin.com/company/cadmic",
     "phone": "#"
-  },
-    "seo": {
-    "siteUrl": "https://www.cadmic.site/",
-    "siteName": "Cadmic",
-    "title": "Cadmic | Academic Web Design for Researchers & Postdocs",
-    "description": "Professional website design for researchers, postdocs, and research groups. Modern, responsive academic websites with publication integration, SEO optimization, and expert support.",
-    "keywords": "academic web design, researcher website, postdoc portfolio, research group website, lab website design",
-    "image": "https://utkarshh-singh.github.io/cadmic/assets/images/ss1.jpg",
-    "twitterHandle": "@cadmic"
   },
   "navigation": [
     { "label": "Home", "href": "#home" },
@@ -34,7 +25,7 @@
       { "text": "View Our Work", "href": "#portfolio", "type": "outline" }
     ],
     "stats": [
-      { "number": "10+", "label": "Researchers Empowered" },
+      { "number": "500+", "label": "Researchers Empowered" },
       { "number": "100%", "label": "Client Satisfaction" },
       { "number": "24/7", "label": "Support Available" }
     ]
@@ -51,7 +42,7 @@
       {
         "icon": "🔗",
         "label": "LinkedIn",
-        "value": "https://www.linkedin.com/company/cadmic/"
+        "value": "linkedin.com/company/cadmic"
       },
       {
         "icon": "📍",
@@ -90,9 +81,9 @@
       }
     ],
     "social": [
-      { "name": "GitHub", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Twitter", "url": "#" }
+      { "name": "GitHub", "url": "https://github.com/cadmic" },
+      { "name": "LinkedIn", "url": "https://ca.linkedin.com/company/cadmic" },
+      { "name": "Twitter", "url": "https://twitter.com/cadmic" }
     ],
     "copyright": "2025 Cadmic. All rights reserved."
   }
