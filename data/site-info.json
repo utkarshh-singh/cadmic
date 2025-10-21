@@ -35,17 +35,17 @@
       {
         "icon": "📧",
         "label": "Email",
-        "value": "hello@cadmic.com"
+        "value": "info.cadmic@gmail.com"
       },
       {
         "icon": "🔗",
         "label": "LinkedIn",
-        "value": "linkedin.com/company/cadmic"
+        "value": "https://www.linkedin.com/company/cadmic/"
       },
       {
         "icon": "📍",
         "label": "Location",
-        "value": "Ottawa, Canada"
+        "value": "Virtual"
       }
     ]
   },
