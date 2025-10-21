@@ -1,0 +1,88 @@
+{
+  "company": {
+    "name": "Cadmic",
+    "tagline": "Academic Web Design Specialists",
+    "location": "Ottawa, Canada",
+    "email": "hello@cadmic.com",
+    "linkedin": "linkedin.com/company/cadmic",
+    "phone": "+1 (613) 555-0123"
+  },
+  "navigation": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Portfolio", "href": "#portfolio" },
+    { "label": "Process", "href": "#process" },
+    { "label": "Contact", "href": "#contact", "primary": true }
+  ],
+  "hero": {
+    "badge": "Academic Web Design Specialists",
+    "title": "Elevate Your <span class='gradient-text'>Research</span> Presence",
+    "subtitle": "We craft stunning, modern websites for researchers, postdocs, and academic groups. Showcase your work with elegance and impact.",
+    "cta": [
+      { "text": "Start Your Project", "href": "#contact", "type": "glow" },
+      { "text": "View Our Work", "href": "#portfolio", "type": "outline" }
+    ],
+    "stats": [
+      { "number": "500+", "label": "Researchers Empowered" },
+      { "number": "100%", "label": "Client Satisfaction" },
+      { "number": "24/7", "label": "Support Available" }
+    ]
+  },
+  "contact": {
+    "title": "Let's Create Something <span class='gradient-text'>Amazing</span>",
+    "description": "Ready to elevate your research presence? Get in touch with us today and let's discuss your project.",
+    "details": [
+      {
+        "icon": "📧",
+        "label": "Email",
+        "value": "hello@cadmic.com"
+      },
+      {
+        "icon": "🔗",
+        "label": "LinkedIn",
+        "value": "linkedin.com/company/cadmic"
+      },
+      {
+        "icon": "📍",
+        "label": "Location",
+        "value": "Ottawa, Canada"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Empowering researchers with modern web solutions",
+    "columns": [
+      {
+        "title": "Services",
+        "links": [
+          { "text": "Personal Websites", "href": "#services" },
+          { "text": "Research Groups", "href": "#services" },
+          { "text": "Postdoc Portfolios", "href": "#services" },
+          { "text": "Custom Solutions", "href": "#services" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "text": "Portfolio", "href": "#portfolio" },
+          { "text": "Our Process", "href": "#process" },
+          { "text": "Contact", "href": "#contact" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "text": "Blog", "href": "#" },
+          { "text": "Documentation", "href": "#" },
+          { "text": "Support", "href": "#" }
+        ]
+      }
+    ],
+    "social": [
+      { "name": "GitHub", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" }
+    ],
+    "copyright": "2025 Cadmic. All rights reserved."
+  }
+}
