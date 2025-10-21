@@ -38,10 +38,21 @@ class DataLoader {
   }
 
   // Populate Navigation
-  populateNavigation() {
-    const navLinks = document.getElementById('navLinks');
-    if (!navLinks || !this.data.siteInfo) return;
+  // Populate Navigation
+populateNavigation() {
+  const navLinks = document.getElementById('navLinks');
+  const logoImage = document.getElementById('logoImage');
+  
+  if (!this.data.siteInfo) return;
 
+  // Update logo image
+  if (logoImage && this.data.siteInfo.company.logo) {
+    logoImage.src = this.data.siteInfo.company.logo;
+    logoImage.alt = this.data.siteInfo.company.logoAlt || this.data.siteInfo.company.name;
+  }
+
+  // Update navigation links
+  if (navLinks) {
     navLinks.innerHTML = this.data.siteInfo.navigation.map(item => `
       <li>
         <a href="${item.href}" class="nav-link ${item.primary ? 'btn-primary' : ''}">
@@ -50,6 +61,8 @@ class DataLoader {
       </li>
     `).join('');
   }
+}
+
 
   // Populate Hero Section
   populateHero() {
