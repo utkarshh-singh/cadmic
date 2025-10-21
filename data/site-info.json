@@ -1,12 +1,4 @@
-{"seo": {
-    "siteUrl": "https://www.cadmic.site/",
-    "siteName": "Cadmic",
-    "title": "Cadmic | Academic Web Design for Researchers & Postdocs",
-    "description": "Professional website design for researchers, postdocs, and research groups. Modern, responsive academic websites with publication integration, SEO optimization, and expert support.",
-    "keywords": "academic web design, researcher website, postdoc portfolio, research group website, lab website design",
-    "image": "https://utkarshh-singh.github.io/cadmic/assets/images/og-image.jpg",
-    "twitterHandle": "@cadmic"
-  },
+{
   "company": {
     "name": "Cadmic",
     "logo": "assets/images/logo.png",
@@ -16,6 +8,15 @@
     "email": "info.cadmic@gmail.com",
     "linkedin": "https://www.linkedin.com/company/cadmic/",
     "phone": "#"
+  },
+    "seo": {
+    "siteUrl": "https://www.cadmic.site/",
+    "siteName": "Cadmic",
+    "title": "Cadmic | Academic Web Design for Researchers & Postdocs",
+    "description": "Professional website design for researchers, postdocs, and research groups. Modern, responsive academic websites with publication integration, SEO optimization, and expert support.",
+    "keywords": "academic web design, researcher website, postdoc portfolio, research group website, lab website design",
+    "image": "https://utkarshh-singh.github.io/cadmic/assets/images/og-image.jpg",
+    "twitterHandle": "@cadmic"
   },
   "navigation": [
     { "label": "Home", "href": "#home" },
