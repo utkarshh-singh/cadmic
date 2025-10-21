@@ -1,0 +1,19 @@
+title: Cadmic - Academic Web Design
+description: Professional website design for researchers, postdocs, and research groups
+url: "https://utkarshh-singh.github.io"
+baseurl: "/cadmic-website"
+
+# SEO settings
+lang: en_US
+timezone: America/Toronto
+
+# Social
+twitter:
+  username: cadmic
+linkedin:
+  username: cadmic
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
