@@ -1,5 +1,5 @@
 :root {
-  /* Brand Colors */
+  /* Brand Colors - EDIT THESE TO CHANGE COLORS */
   --primary-color: #0066CC;
   --secondary-color: #00D4FF;
   --accent-color: #4DD0E1;
@@ -8,7 +8,7 @@
   --light-text: #FFFFFF;
   --gray-text: #B0BEC5;
   
-  /* Typography */
+  /* Typography - EDIT THESE TO CHANGE FONTS */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   
@@ -17,7 +17,7 @@
   --font-size-h3: 1.75rem;
   --font-size-body: 1.1rem;
   
-  /* Spacing */
+  /* Spacing - EDIT THESE TO CHANGE LAYOUT */
   --section-padding: 100px;
   --container-max-width: 1200px;
   
@@ -28,6 +28,7 @@
   --hover-lift: translateY(-10px);
 }
 
+/* Responsive Typography */
 @media (max-width: 768px) {
   :root {
     --font-size-hero: 2.5rem;
