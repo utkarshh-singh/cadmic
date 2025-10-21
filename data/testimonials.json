@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Cadmic transformed my online presence. The website they built perfectly showcases my research and has helped me connect with collaborators worldwide.",
+      "author": "Dr. Sarah Johnson",
+      "position": "Postdoc, Stanford University",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "quote": "Our research group needed a modern website that could grow with us. Cadmic delivered beyond our expectations with an elegant, easy-to-manage solution.",
+      "author": "Prof. Michael Chen",
+      "position": "PI, Computational Biology Lab",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "quote": "The attention to detail and understanding of academic needs sets Cadmic apart. They truly understand what researchers need from a website.",
+      "author": "Dr. Emily Rodriguez",
+      "position": "Research Scientist, CERN",
+      "image": ""
+    }
+  ]
+}
