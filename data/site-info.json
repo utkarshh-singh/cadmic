@@ -3,9 +3,9 @@
     "name": "Cadmic",
     "tagline": "Academic Web Design Specialists",
     "location": "Ottawa, Canada",
-    "email": "hello@cadmic.com",
-    "linkedin": "linkedin.com/company/cadmic",
-    "phone": "+1 (613) 555-0123"
+    "email": "info.cadmic@gmail.com",
+    "linkedin": "https://www.linkedin.com/company/cadmic/",
+    "phone": "#"
   },
   "navigation": [
     { "label": "Home", "href": "#home" },
