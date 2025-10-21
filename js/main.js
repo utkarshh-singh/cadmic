@@ -47,24 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form submission handling
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+// document.addEventListener('DOMContentLoaded', () => {
+//   const contactForm = document.getElementById('contactForm');
+//   if (contactForm) {
+//     contactForm.addEventListener('submit', (e) => {
+//       e.preventDefault();
       
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
+//       const formData = new FormData(contactForm);
+//       const data = Object.fromEntries(formData);
       
-      // Show success message
-      alert('Thank you for your message! We will get back to you soon.');
-      contactForm.reset();
+//       // Show success message
+//       alert('Thank you for your message! We will get back to you soon.');
+//       contactForm.reset();
       
-      // TODO: Implement actual form submission
-      console.log('Form data:', data);
-    });
-  }
-});
+//       // TODO: Implement actual form submission
+//       console.log('Form data:', data);
+//     });
+//   }
+// });
 
 // Intersection Observer for scroll animations
 const observerOptions = {
