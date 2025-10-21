@@ -47,23 +47,18 @@ class ParticleBackground {
   animate() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     
-    // Update and draw particles
     this.particles.forEach((particle, i) => {
-      // Move particle
       particle.x += particle.vx;
       particle.y += particle.vy;
       
-      // Bounce off edges
       if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
       if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
       
-      // Draw particle
       this.ctx.beginPath();
       this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
       this.ctx.fillStyle = 'rgba(0, 212, 255, 0.5)';
       this.ctx.fill();
       
-      // Draw connections
       for (let j = i + 1; j < this.particles.length; j++) {
         const dx = this.particles[j].x - particle.x;
         const dy = this.particles[j].y - particle.y;
@@ -84,7 +79,6 @@ class ParticleBackground {
   }
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new ParticleBackground();
 });
