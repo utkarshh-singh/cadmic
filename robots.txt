@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
-Disallow: /data/
+
 Sitemap: https://www.cadmic.site/sitemap.xml
