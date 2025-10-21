@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadmic | Academic Web Design Excellence</title>
-    <meta name="description" content="Cadmic specializes in creating modern, professional websites for researchers, postdocs, and research groups.">
+    
+    <!-- Primary Meta Tags -->
+    <title>Cadmic | Academic Web Design for Researchers & Postdocs</title>
+    <meta name="description" content="Professional website design for researchers, postdocs, and research groups. Modern, responsive academic websites with publication integration, SEO optimization, and expert support.">
+    <meta name="keywords" content="academic web design, researcher website, postdoc portfolio, research group website, lab website design, Ottawa web design">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.cadmic.site/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cadmic.site/">
+    <meta property="og:title" content="Cadmic | Academic Web Design for Researchers">
+    <meta property="og:description" content="Professional website design for researchers, postdocs, and research groups.">
+    <meta property="og:image" content="https://www.cadmic.site/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cadmic | Academic Web Design">
+    <meta name="twitter:description" content="Professional website design for researchers and academic groups.">
+    <meta name="twitter:image" content="https://www.cadmic.site/assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,11 +55,7 @@
                     <span class="logo-dot">.</span>
                 </a>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#process" class="nav-link">Process</a></li>
-                    <li><a href="#contact" class="nav-link btn-primary">Get Started</a></li>
+                    <!-- Navigation loaded from JSON -->
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -52,32 +70,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content" id="heroContent">
-                <div class="hero-badge fade-in-up">Academic Web Design Specialists</div>
-                <h1 class="hero-title fade-in-up delay-1">
-                    Elevate Your <span class="gradient-text">Research</span> Presence
-                </h1>
-                <p class="hero-subtitle fade-in-up delay-2">
-                    We craft stunning, modern websites for researchers, postdocs, and academic groups. 
-                    Showcase your work with elegance and impact.
-                </p>
-                <div class="hero-cta fade-in-up delay-3">
-                    <a href="#contact" class="btn btn-large btn-glow">Start Your Project</a>
-                    <a href="#portfolio" class="btn btn-large btn-outline">View Our Work</a>
-                </div>
-                <div class="hero-stats fade-in-up delay-4">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Researchers Empowered</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support Available</div>
-                    </div>
-                </div>
+                <!-- Hero content loaded from JSON -->
             </div>
         </div>
         <div class="scroll-indicator">
@@ -85,38 +78,34 @@
         </div>
     </section>
 
-    <!-- Services Section with Slider -->
+    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
                 <p class="section-subtitle">Tailored solutions for academic excellence</p>
             </div>
-            
-            <!-- Services Slider -->
             <div class="splide" id="servicesSlider">
                 <div class="splide__track">
                     <ul class="splide__list" id="servicesList">
-                        <!-- Services will be loaded from JSON -->
+                        <!-- Services loaded from JSON -->
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section with Slider -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
                 <p class="section-subtitle">Excellence delivered for researchers worldwide</p>
             </div>
-            
-            <!-- Portfolio Slider -->
             <div class="splide" id="portfolioSlider">
                 <div class="splide__track">
                     <ul class="splide__list" id="portfolioList">
-                        <!-- Portfolio items will be loaded from JSON -->
+                        <!-- Portfolio loaded from JSON -->
                     </ul>
                 </div>
             </div>
@@ -131,7 +120,7 @@
                 <p class="section-subtitle">From concept to launch in simple steps</p>
             </div>
             <div class="process-timeline" id="processTimeline">
-                <!-- Process steps will be loaded from JSON -->
+                <!-- Process loaded from JSON -->
             </div>
         </div>
     </section>
@@ -143,7 +132,7 @@
                 <h2 class="section-title">What <span class="gradient-text">Researchers</span> Say</h2>
             </div>
             <div class="testimonials-grid" id="testimonialsGrid">
-                <!-- Testimonials will be loaded from JSON -->
+                <!-- Testimonials loaded from JSON -->
             </div>
         </div>
     </section>
@@ -153,42 +142,24 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info" id="contactInfo">
-                    <h2>Let's Create Something <span class="gradient-text">Amazing</span></h2>
-                    <p>Ready to elevate your research presence? Get in touch with us today and let's discuss your project.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <div>
-                                <strong>Email</strong>
-                                <p>info.cadmic@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">🔗</span>
-                            <div>
-                                <strong>LinkedIn</strong>
-                                <p>linkedin.com/company/cadmic</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <strong>Location</strong>
-                                <p>Virtual</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Contact info loaded from JSON -->
                 </div>
-                <form class="contact-form glass-card" id="contactForm">
+                <form class="contact-form glass-card" 
+                      id="contactForm"
+                      action="https://api.web3forms.com/submit" 
+                      method="POST">
+                    
+                    <!-- Get your key from https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="New Contact from Cadmic Website">
+                    <input type="checkbox" name="botcheck" style="display: none;">
+                    
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="text" name="affiliation" placeholder="Institution/Affiliation">
                     <select name="service" required id="serviceSelect">
                         <option value="">Select Service</option>
-                        <option value="personal">Personal Research Website</option>
-                        <option value="group">Research Group Portal</option>
-                        <option value="postdoc">Postdoc Portfolio</option>
-                        <option value="custom">Custom Solution</option>
+                        <!-- Options loaded from JSON -->
                     </select>
                     <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
                     <button type="submit" class="btn btn-large btn-glow">Send Message</button>
@@ -199,49 +170,10 @@
 
     <!-- Footer -->
     <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-text">Cadmic</span>
-                        <span class="logo-dot">.</span>
-                    </div>
-                    <p>Empowering researchers with modern web solutions</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <a href="#services">Personal Websites</a>
-                        <a href="#services">Research Groups</a>
-                        <a href="#services">Postdoc Portfolios</a>
-                        <a href="#services">Custom Solutions</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="#portfolio">Portfolio</a>
-                        <a href="#process">Our Process</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <a href="#">Blog</a>
-                        <a href="#">Documentation</a>
-                        <a href="#">Support</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Cadmic. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                </div>
-            </div>
-        </div>
+        <!-- Footer loaded from JSON -->
     </footer>
 
-    <!-- Scripts - KEEP THIS ORDER! -->
+    <!-- Scripts - DO NOT CHANGE ORDER -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/dataLoader.js"></script>
