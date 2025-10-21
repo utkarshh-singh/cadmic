@@ -1,5 +1,5 @@
 /* Import Variables */
-@import url('../config/variables.css');
+@import url('../css/variables.css');
 
 /* Reset & Base Styles */
 * {
@@ -301,6 +301,7 @@ section {
   border-radius: 16px;
   padding: 30px;
   transition: all var(--transition-speed);
+  height: 100%;
 }
 
 .glass-card:hover {
@@ -309,13 +310,40 @@ section {
   box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
 }
 
-/* Services Section */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+/* Splide Slider Customization */
+.splide__arrow {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border) !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all var(--transition-speed);
 }
 
+.splide__arrow:hover {
+  background: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  transform: scale(1.1);
+}
+
+.splide__arrow svg {
+  fill: var(--light-text);
+}
+
+.splide__pagination__page {
+  background: var(--glass-border) !important;
+  width: 12px;
+  height: 12px;
+  transition: all var(--transition-speed);
+}
+
+.splide__pagination__page.is-active {
+  background: var(--secondary-color) !important;
+  transform: scale(1.3);
+}
+
+/* Services Section */
 .service-card {
   text-align: center;
 }
@@ -362,12 +390,6 @@ section {
   background: var(--dark-bg);
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
 .portfolio-item {
   position: relative;
   border-radius: 16px;
@@ -380,6 +402,8 @@ section {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,6 +451,24 @@ section {
 .portfolio-overlay p {
   color: var(--gray-text);
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  padding: 5px 15px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
 }
 
 .portfolio-link {
@@ -696,14 +738,6 @@ section {
   
   .hero-stats {
     gap: 30px;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .portfolio-grid {
-    grid-template-columns: 1fr;
   }
   
   .contact-content {
