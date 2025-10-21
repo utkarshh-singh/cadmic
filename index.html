@@ -146,13 +146,12 @@
                 </div>
                 <form class="contact-form glass-card" 
                       id="contactForm"
-                      action="https://api.web3forms.com/submit" 
+                      action="https://formspree.io/f/mkgqavvw" 
                       method="POST">
                     
-                    <!-- Get your key from https://web3forms.com -->
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                    <input type="hidden" name="subject" value="New Contact from Cadmic Website">
-                    <input type="checkbox" name="botcheck" style="display: none;">
+                    <!-- Formspree configuration -->
+                    <input type="hidden" name="_subject" value="New Contact from Cadmic Website">
+
                     
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
