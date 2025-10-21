@@ -1,6 +1,8 @@
 {
   "company": {
     "name": "Cadmic",
+    "logo": "assets/images/logo.png",
+    "logoAlt": "Cadmic - Academic Web Design",
     "tagline": "Academic Web Design Specialists",
     "location": "Ottawa, Canada",
     "email": "info.cadmic@gmail.com",
