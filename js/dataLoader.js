@@ -119,29 +119,28 @@ populateNavigation() {
   }
 
   // Populate Portfolio
-  populatePortfolio() {
-    const portfolioList = document.getElementById('portfolioList');
-    if (!portfolioList || !this.data.portfolio) return;
-
-    portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
-      <li class="splide__slide">
-        <div class="portfolio-item">
-          <div class="portfolio-image" style="background-image: url('${project.image}')">
-            <div class="portfolio-placeholder">${project.title}</div>
-          </div>
-          <div class="portfolio-overlay">
-            <h3>${project.category}</h3>
-            <p>${project.description}</p>
-            <div class="portfolio-tags">
-              ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
-            <a href="${project.url}" class="portfolio-link">View Project →</a>
-          </div>
+  portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
+    <li class="splide__slide">
+      <div class="portfolio-item">
+        <div class="portfolio-image" style="background-image: url('${project.image}')">
+          <div class="portfolio-placeholder">${project.title}</div>
         </div>
-      </li>
-    `).join('');
-  }
+        <div class="portfolio-overlay">
+          <h3>${project.category}</h3>
+          <p>${project.description}</p>
+          <div class="portfolio-tags">
+            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          </div>
+          <a href="${project.url}" class="portfolio-link" 
+             aria-label="View ${project.title} project details">
+            View Project →
+          </a>
+        </div>
+      </div>
+    </li>
+  `).join('');
 
+ }
   // Populate Process
   populateProcess() {
     const processTimeline = document.getElementById('processTimeline');
