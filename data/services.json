@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "icon": "🔬",
+      "title": "Personal Research Websites",
+      "description": "Showcase your publications, CV, and research interests with a modern, professional website that stands out.",
+      "features": [
+        "Google Scholar Integration",
+        "Publication Auto-Update",
+        "Responsive Design",
+        "SEO Optimized"
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "👥",
+      "title": "Research Group Portals",
+      "description": "Comprehensive websites for labs and research groups featuring team management and project showcases.",
+      "features": [
+        "Team Member Profiles",
+        "Project Galleries",
+        "News & Updates",
+        "Collaboration Tools"
+      ]
+    },
+    {
+      "id": 3,
+      "icon": "🎓",
+      "title": "Postdoc Portfolios",
+      "description": "Stand out in your postdoc applications with a striking portfolio website highlighting your achievements.",
+      "features": [
+        "Interactive CV",
+        "Research Highlights",
+        "Teaching Portfolio",
+        "Contact Integration"
+      ]
+    },
+    {
+      "id": 4,
+      "icon": "🚀",
+      "title": "Custom Solutions",
+      "description": "Need something unique? We build custom academic platforms tailored to your specific requirements.",
+      "features": [
+        "Database Integration",
+        "Custom Features",
+        "API Development",
+        "Ongoing Maintenance"
+      ]
+    }
+  ]
+}
