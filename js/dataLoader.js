@@ -37,34 +37,28 @@ class DataLoader {
     return this.data;
   }
 
-  // Populate Navigation
-  // Populate Navigation
-populateNavigation() {
-  const navLinks = document.getElementById('navLinks');
-  const logoImage = document.getElementById('logoImage');
-  
-  if (!this.data.siteInfo) return;
+  populateNavigation() {
+    const navLinks = document.getElementById('navLinks');
+    const logoImage = document.getElementById('logoImage');
+    
+    if (!this.data.siteInfo) return;
 
-  // Update logo image
-  if (logoImage && this.data.siteInfo.company.logo) {
-    logoImage.src = this.data.siteInfo.company.logo;
-    logoImage.alt = this.data.siteInfo.company.logoAlt || this.data.siteInfo.company.name;
+    if (logoImage && this.data.siteInfo.company.logo) {
+      logoImage.src = this.data.siteInfo.company.logo;
+      logoImage.alt = this.data.siteInfo.company.logoAlt || this.data.siteInfo.company.name;
+    }
+
+    if (navLinks) {
+      navLinks.innerHTML = this.data.siteInfo.navigation.map(item => `
+        <li>
+          <a href="${item.href}" class="nav-link ${item.primary ? 'btn-primary' : ''}">
+            ${item.label}
+          </a>
+        </li>
+      `).join('');
+    }
   }
 
-  // Update navigation links
-  if (navLinks) {
-    navLinks.innerHTML = this.data.siteInfo.navigation.map(item => `
-      <li>
-        <a href="${item.href}" class="nav-link ${item.primary ? 'btn-primary' : ''}">
-          ${item.label}
-        </a>
-      </li>
-    `).join('');
-  }
-}
-
-
-  // Populate Hero Section
   populateHero() {
     const heroContent = document.getElementById('heroContent');
     if (!heroContent || !this.data.siteInfo) return;
@@ -90,7 +84,6 @@ populateNavigation() {
     `;
   }
 
-  // Populate Services
   populateServices() {
     const servicesList = document.getElementById('servicesList');
     if (!servicesList || !this.data.services) return;
@@ -108,7 +101,6 @@ populateNavigation() {
       </li>
     `).join('');
 
-    // Also populate form select options
     const serviceSelect = document.getElementById('serviceSelect');
     if (serviceSelect) {
       const options = this.data.services.services.map(service => 
@@ -118,30 +110,29 @@ populateNavigation() {
     }
   }
 
-  // Populate Portfolio
-  portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
-    <li class="splide__slide">
-      <div class="portfolio-item">
-        <div class="portfolio-image" style="background-image: url('${project.image}')">
-          <div class="portfolio-placeholder">${project.title}</div>
-        </div>
-        <div class="portfolio-overlay">
-          <h3>${project.category}</h3>
-          <p>${project.description}</p>
-          <div class="portfolio-tags">
-            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-          </div>
-          <a href="${project.url}" class="portfolio-link" 
-             aria-label="View ${project.title} project details">
-            View Project →
-          </a>
-        </div>
-      </div>
-    </li>
-  `).join('');
+  populatePortfolio() {
+    const portfolioList = document.getElementById('portfolioList');
+    if (!portfolioList || !this.data.portfolio) return;
 
- }
-  // Populate Process
+    portfolioList.innerHTML = this.data.portfolio.projects.map(project => `
+      <li class="splide__slide">
+        <div class="portfolio-item">
+          <div class="portfolio-image" style="background-image: url('${project.image}')">
+            <div class="portfolio-placeholder">${project.title}</div>
+          </div>
+          <div class="portfolio-overlay">
+            <h3>${project.category}</h3>
+            <p>${project.description}</p>
+            <div class="portfolio-tags">
+              ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <a href="${project.url}" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+      </li>
+    `).join('');
+  }
+
   populateProcess() {
     const processTimeline = document.getElementById('processTimeline');
     if (!processTimeline || !this.data.process) return;
@@ -157,7 +148,6 @@ populateNavigation() {
     `).join('');
   }
 
-  // Populate Testimonials
   populateTestimonials() {
     const testimonialsGrid = document.getElementById('testimonialsGrid');
     if (!testimonialsGrid || !this.data.testimonials) return;
@@ -174,7 +164,6 @@ populateNavigation() {
     `).join('');
   }
 
-  // Populate Contact
   populateContact() {
     const contactInfo = document.getElementById('contactInfo');
     if (!contactInfo || !this.data.siteInfo) return;
@@ -197,7 +186,6 @@ populateNavigation() {
     `;
   }
 
-  // Populate Footer
   populateFooter() {
     const footer = document.getElementById('footer');
     if (!footer || !this.data.siteInfo) return;
@@ -208,11 +196,9 @@ populateNavigation() {
         <div class="footer-content">
           <div class="footer-brand">
             <div class="logo">
-              <img src="${this.data.siteInfo.company.logo}" alt="${this.data.siteInfo.company.logoAlt}" class="logo-image">
               <span class="logo-text">${this.data.siteInfo.company.name}</span>
               <span class="logo-dot">.</span>
             </div>
-
             <p>${footerData.description}</p>
           </div>
           <div class="footer-links">
@@ -238,7 +224,6 @@ populateNavigation() {
     `;
   }
 
-  // Populate everything
   async init() {
     await this.loadAll();
     
@@ -253,13 +238,11 @@ populateNavigation() {
   }
 }
 
-// Initialize data loader when DOM is ready
 let dataLoader;
 document.addEventListener('DOMContentLoaded', async () => {
   dataLoader = new DataLoader();
   await dataLoader.init();
   
-  // Initialize sliders after data is loaded
   if (window.initSliders) {
     window.initSliders();
   }
