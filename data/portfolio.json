@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Dr. Sarah Smith - Quantum Physics",
+      "category": "Personal Research Website",
+      "description": "Clean, modern site with Google Scholar integration and publication management",
+      "image": "assets/portfolio/project-1.jpg",
+      "url": "#",
+      "tags": ["Research", "Physics", "Publications"]
+    },
+    {
+      "id": 2,
+      "title": "AI Research Lab - MIT",
+      "category": "Research Group Portal",
+      "description": "Comprehensive lab website with team management and project showcases",
+      "image": "assets/portfolio/project-2.jpg",
+      "url": "#",
+      "tags": ["Lab", "AI", "Team Portal"]
+    },
+    {
+      "id": 3,
+      "title": "Dr. Michael Chen Portfolio",
+      "category": "Postdoc Portfolio",
+      "description": "Interactive CV and research showcase for postdoc applications",
+      "image": "assets/portfolio/project-3.jpg",
+      "url": "#",
+      "tags": ["Postdoc", "Portfolio", "CV"]
+    },
+    {
+      "id": 4,
+      "title": "Neuroscience Department",
+      "category": "Department Website",
+      "description": "Full-featured academic department portal with course management",
+      "image": "assets/portfolio/project-4.jpg",
+      "url": "#",
+      "tags": ["Department", "Neuroscience", "Academic"]
+    },
+    {
+      "id": 5,
+      "title": "Dr. Emily Rodriguez - CERN",
+      "category": "Personal Research Website",
+      "description": "Advanced researcher profile with interactive data visualization",
+      "image": "assets/portfolio/project-5.jpg",
+      "url": "#",
+      "tags": ["Research", "Physics", "CERN"]
+    }
+  ]
+}
