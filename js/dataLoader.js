@@ -209,9 +209,11 @@ populateNavigation() {
         <div class="footer-content">
           <div class="footer-brand">
             <div class="logo">
+              <img src="${this.data.siteInfo.company.logo}" alt="${this.data.siteInfo.company.logoAlt}" class="logo-image">
               <span class="logo-text">${this.data.siteInfo.company.name}</span>
               <span class="logo-dot">.</span>
             </div>
+
             <p>${footerData.description}</p>
           </div>
           <div class="footer-links">
