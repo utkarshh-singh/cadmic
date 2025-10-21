@@ -171,7 +171,7 @@ body {
   border: 2px solid transparent;
 }
 
-.btn-primary {
+/* .btn-primary {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: var(--light-text);
 }
@@ -179,7 +179,23 @@ body {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+} */
+
+.btn-primary {
+  background: rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--secondary-color);
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
+
+.btn-primary:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+}
+
+
 
 .btn-large {
   padding: 16px 40px;
