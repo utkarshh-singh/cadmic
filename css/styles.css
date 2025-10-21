@@ -1008,3 +1008,33 @@ section {
     text-align: center;
   }
 }
+
+
+/* Contact Links */
+.contact-link {
+  color: var(--gray-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
