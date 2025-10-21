@@ -2,19 +2,19 @@
   "projects": [
     {
       "id": 1,
-      "title": "Dr. Sarah Smith - Quantum Physics",
+      "title": "Utkarsh Singh",
       "category": "Personal Research Website",
       "description": "Clean, modern site with Google Scholar integration and publication management",
-      "image": "assets/portfolio/ss1.png",
+      "image": "assets/images/ss1.png",
       "url": "#",
       "tags": ["Research", "Physics", "Publications"]
     },
     {
       "id": 2,
-      "title": "AI Research Lab - MIT",
+      "title": "Photonics Research Lab (PQUIP) - NRC/CNRC",
       "category": "Research Group Portal",
       "description": "Comprehensive lab website with team management and project showcases",
-      "image": "assets/portfolio/ss2.png",
+      "image": "assets/images/ss2.png",
       "url": "#",
       "tags": ["Lab", "AI", "Team Portal"]
     },
@@ -23,7 +23,7 @@
       "title": "Dr. Michael Chen Portfolio",
       "category": "Postdoc Portfolio",
       "description": "Interactive CV and research showcase for postdoc applications",
-      "image": "assets/portfolio/ss3.png",
+      "image": "assets/images/ss3.png",
       "url": "#",
       "tags": ["Postdoc", "Portfolio", "CV"]
     },
