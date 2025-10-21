@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "number": "01",
+      "title": "Discovery",
+      "description": "We discuss your research, goals, and vision for your online presence."
+    },
+    {
+      "number": "02",
+      "title": "Design",
+      "description": "Our team creates a stunning, custom design tailored to your field and style."
+    },
+    {
+      "number": "03",
+      "title": "Development",
+      "description": "We build your website with modern technology, ensuring speed and reliability."
+    },
+    {
+      "number": "04",
+      "title": "Launch",
+      "description": "Your website goes live, and we provide training and ongoing support."
+    }
+  ]
+}
