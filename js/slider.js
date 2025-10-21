@@ -10,7 +10,7 @@ window.initSliders = function() {
       gap: '2rem',
       padding: '2rem',
       autoplay: true,
-      interval: 4000,
+      interval: 4000,        // Change this for autoplay speed (milliseconds)
       pauseOnHover: true,
       pauseOnFocus: true,
       arrows: true,
@@ -40,7 +40,7 @@ window.initSliders = function() {
       gap: '2rem',
       padding: '2rem',
       autoplay: true,
-      interval: 5000,
+      interval: 5000,        // Change this for autoplay speed (milliseconds)
       pauseOnHover: true,
       pauseOnFocus: true,
       arrows: true,
