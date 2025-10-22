@@ -1,0 +1,164 @@
+<!-- Feedback Button -->
+<button id="feedbackBtn" class="feedback-button" aria-label="Share Feedback">
+    <span class="feedback-icon">💬</span>
+    <span class="feedback-text">Feedback</span>
+</button>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="feedback-modal">
+    <div class="feedback-modal-content">
+        <button class="feedback-close" id="feedbackClose">&times;</button>
+        
+        <div class="feedback-header">
+            <h2>Share Your Experience</h2>
+            <p>Help us showcase your success story</p>
+        </div>
+
+        <form id="feedbackForm" 
+              action="https://formspree.io/f/mkgqavvw" 
+              method="POST">
+            
+            <input type="hidden" name="_subject" value="New Client Feedback - Cadmic">
+            <input type="hidden" name="form_type" value="feedback">
+            
+            <!-- Personal Information with Anonymous Option -->
+            <div class="form-section">
+                <h3>Your Information</h3>
+                
+                <div class="form-group checkbox-group" style="margin-bottom: 20px;">
+                    <label class="checkbox-label anonymous-checkbox">
+                        <input type="checkbox" id="submit_anonymous" name="submit_anonymous" value="yes">
+                        <span>Submit anonymously (we won't display your name publicly)</span>
+                    </label>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="feedback_name">Your Name <span class="required-indicator">*</span></label>
+                        <input type="text" id="feedback_name" name="name" placeholder="Dr. Jane Smith" required>
+                        <small class="anonymous-note" style="display: none; color: #00D4FF;">
+                            ✓ Your name will be kept private
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback_title">Title/Position <span class="optional-text">(Optional)</span></label>
+                        <input type="text" id="feedback_title" name="position" placeholder="Postdoc, Stanford University">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="feedback_email">Email <span class="required-indicator">*</span></label>
+                        <input type="email" id="feedback_email" name="email" placeholder="jane.smith@stanford.edu" required>
+                        <small class="anonymous-note" style="display: none; color: #00D4FF;">
+                            ✓ Your email will be kept private
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback_institution">Institution <span class="optional-text">(Optional)</span></label>
+                        <input type="text" id="feedback_institution" name="institution" placeholder="Stanford University">
+                    </div>
+                </div>
+                
+                <div class="anonymous-display-section" style="display: none; margin-top: 20px; padding: 15px; background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 10px;">
+                    <h4 style="color: #00D4FF; font-size: 1rem; margin-bottom: 10px;">How will your testimonial appear?</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="display_name">Display Name <span class="optional-text">(Optional)</span></label>
+                            <input type="text" id="display_name" name="display_name" placeholder="Anonymous Researcher">
+                            <small>Leave blank to show as "Anonymous"</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="display_title">Display Title <span class="optional-text">(Optional)</span></label>
+                            <input type="text" id="display_title" name="display_title" placeholder="Research Professional">
+                            <small>Leave blank to show as "Research Community"</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Section -->
+            <div class="form-section">
+                <h3>Your Testimonial</h3>
+                <div class="form-group">
+                    <label for="feedback_testimonial">Share your experience with Cadmic *</label>
+                    <textarea id="feedback_testimonial" 
+                              name="testimonial" 
+                              rows="5" 
+                              placeholder="Tell us about your experience working with Cadmic. What did you appreciate most? How has your new website helped your research visibility?"
+                              required></textarea>
+                    <small>This will appear in our "What Researchers Say" section</small>
+                </div>
+            </div>
+
+            <!-- Project Showcase Permission -->
+            <div class="form-section">
+                <h3>Project Showcase</h3>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="allow_showcase" name="allow_showcase" value="yes">
+                        <span>Yes, you can showcase my project on your website</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="form-section" id="projectDetails" style="display: none;">
+                <h3>Project Information</h3>
+                <div class="form-group">
+                    <label for="project_title">Project Title *</label>
+                    <input type="text" id="project_title" name="project_title" placeholder="Dr. Jane Smith - Quantum Physics Research">
+                </div>
+                <div class="form-group">
+                    <label for="project_category">Project Category *</label>
+                    <select id="project_category" name="project_category">
+                        <option value="">Select a category</option>
+                        <option value="Personal Research Website">Personal Research Website</option>
+                        <option value="Research Group Portal">Research Group Portal</option>
+                        <option value="Postdoc Portfolio">Postdoc Portfolio</option>
+                        <option value="Department Website">Department Website</option>
+                        <option value="Custom Solution">Custom Solution</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="project_description">Project Description *</label>
+                    <textarea id="project_description" 
+                              name="project_description" 
+                              rows="3"
+                              placeholder="Brief description of the website we built for you"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="project_url">Website URL *</label>
+                    <input type="url" id="project_url" name="project_url" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="project_tags">Tags/Keywords (comma-separated) *</label>
+                    <input type="text" id="project_tags" name="project_tags" placeholder="Research, Physics, Publications">
+                    <small>Example: Research, AI, Machine Learning</small>
+                </div>
+                <div class="form-group">
+                    <label for="project_image">Screenshot URL (optional)</label>
+                    <input type="url" id="project_image" name="project_image" placeholder="https://example.com/screenshot.jpg">
+                    <small>Link to a screenshot of your website</small>
+                </div>
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="form-section">
+                <h3>Additional Information (Optional)</h3>
+                <div class="form-group">
+                    <label for="additional_comments">Any other feedback or suggestions?</label>
+                    <textarea id="additional_comments" 
+                              name="additional_comments" 
+                              rows="3"
+                              placeholder="Share any additional thoughts..."></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+                <button type="submit" class="btn-primary btn-submit">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</div>
