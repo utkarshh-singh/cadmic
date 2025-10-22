@@ -555,7 +555,7 @@ section {
   cursor: pointer;
   transition: all 0.4s ease;
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
   border: 1px solid var(--glass-border);
 }
 
