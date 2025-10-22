@@ -103,11 +103,24 @@ class PortfolioLightbox {
     const imageUrl = slideElement.querySelector('.portfolio-image')?.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1') || '';
     const link = slideElement.querySelector('.portfolio-link')?.href || '#';
     const tags = Array.from(slideElement.querySelectorAll('.tag')).map(tag => tag.textContent);
-
-    // Get all slides for navigation
-    this.projects = Array.from(document.querySelectorAll('.splide__slide'));
-    this.currentIndex = this.projects.indexOf(slideElement);
-
+  
+    // Get only REAL slides (not clones created by Splide)
+    this.projects = Array.from(document.querySelectorAll('#portfolioSlider .splide__slide:not(.splide__slide--clone)'));
+    
+    // Find the index of the current slide in the real slides
+    const realSlide = slideElement.classList.contains('splide__slide--clone') 
+      ? document.querySelector(`#portfolioSlider .splide__slide:not(.splide__slide--clone)[data-index="${slideElement.getAttribute('data-index')}"]`)
+      : slideElement;
+    
+    this.currentIndex = this.projects.indexOf(realSlide);
+    
+    // If index not found, find by matching content
+    if (this.currentIndex === -1) {
+      this.currentIndex = this.projects.findIndex(slide => 
+        slide.querySelector('.portfolio-title')?.textContent === title
+      );
+    }
+  
     // Populate lightbox
     document.getElementById('lightboxImage').src = imageUrl || 'assets/portfolio/placeholder.jpg';
     document.getElementById('lightboxTitle').textContent = title;
@@ -118,15 +131,16 @@ class PortfolioLightbox {
     // Populate tags
     const tagsContainer = document.getElementById('lightboxTags');
     tagsContainer.innerHTML = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-
-    // Update counter
+  
+    // Update counter with correct count
     document.getElementById('lightboxCounter').textContent = `${this.currentIndex + 1} / ${this.projects.length}`;
-
+  
     // Show lightbox
     const lightbox = document.getElementById('portfolioLightbox');
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
+
 
   closeLightbox() {
     const lightbox = document.getElementById('portfolioLightbox');
