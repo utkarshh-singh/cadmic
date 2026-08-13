@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Cadmic | Academic Web Design for Researchers & Postdocs</title>
-    <meta name="description" content="Professional website design for researchers, postdocs, and research groups. Modern, responsive academic websites with publication integration, SEO optimization, and expert support.">
+    <meta name="description" content="Cadmic builds beautiful, affordable academic websites for researchers, postdocs, and research groups — one-time fee, fast turnaround, SEO-optimized, hosted on GitHub Pages.">
     <meta name="keywords" content="academic web design, researcher website, postdoc portfolio, research group website, lab website design, Ottawa web design">
-    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cadmic">
+    <meta name="theme-color" content="#0A1929" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F0F4F8" media="(prefers-color-scheme: light)">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.cadmic.site/">
-    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/fevicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cadmic.site/">
+    <meta property="og:site_name" content="Cadmic">
     <meta property="og:title" content="Cadmic | Academic Web Design for Researchers">
-    <meta property="og:description" content="Professional website design for researchers, postdocs, and research groups.">
-    <meta property="og:image" content="https://www.cadmic.site/assets/images/og-image.jpg">
-    
+    <meta property="og:description" content="Beautiful, affordable academic websites for researchers, postdocs, and research groups. Built for researchers, by researchers.">
+    <meta property="og:image" content="https://www.cadmic.site/assets/images/logo.png">
+
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Cadmic | Academic Web Design">
-    <meta name="twitter:description" content="Professional website design for researchers and academic groups.">
-    <meta name="twitter:image" content="https://www.cadmic.site/assets/images/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    
+    <meta name="twitter:description" content="Beautiful, affordable academic websites for researchers and academic groups. Built for researchers, by researchers.">
+    <meta name="twitter:image" content="https://www.cadmic.site/assets/images/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Cadmic",
+      "url": "https://www.cadmic.site/",
+      "logo": "https://www.cadmic.site/assets/images/logo.png",
+      "image": "https://www.cadmic.site/assets/images/logo.png",
+      "description": "Cadmic builds beautiful, affordable academic websites for researchers, postdocs, and research groups — one-time fee, fast turnaround, hosted on GitHub Pages.",
+      "email": "info.cadmic@gmail.com",
+      "areaServed": "Worldwide",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ottawa",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "sameAs": [
+        "https://ca.linkedin.com/company/cadmic",
+        "https://www.instagram.com/cadmic.site/"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Research Websites" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Research Group Portals" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Postdoc Portfolios" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Academic Solutions" } }
+      ]
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Splide Slider CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    
+
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="feedback/feedback.css">
 </head>
 <body>
     <!-- Particle Background -->
     <div id="particles-bg"></div>
-    
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -55,7 +98,11 @@
                     <span class="logo-dot">.</span>
                 </a>
                 <ul class="nav-links" id="navLinks">
-                    <!-- Navigation loaded from JSON -->
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#contact" class="nav-link btn-primary">Contact</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -70,7 +117,27 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content" id="heroContent">
-                <!-- Hero content loaded from JSON -->
+                <div class="hero-badge fade-in-up">Academic Web Design Specialists</div>
+                <h1 class="hero-title fade-in-up delay-1">Elevate Your <span class="gradient-text">Research</span> Presence</h1>
+                <p class="hero-subtitle fade-in-up delay-2">We craft stunning, modern websites for researchers, postdocs, and academic groups. Showcase your work with elegance and impact.</p>
+                <div class="hero-cta fade-in-up delay-3">
+                    <a href="#contact" class="btn btn-large btn-glow">Start Your Project</a>
+                    <a href="#portfolio" class="btn btn-large btn-outline">View Our Work</a>
+                </div>
+                <div class="hero-stats fade-in-up delay-4">
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Researchers Empowered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -88,7 +155,58 @@
             <div class="splide" id="servicesSlider">
                 <div class="splide__track">
                     <ul class="splide__list" id="servicesList">
-                        <!-- Services loaded from JSON -->
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">🔬</div>
+                                <h3>Personal Research Websites</h3>
+                                <p>Showcase your publications, CV, and research interests with a modern, professional website that stands out.</p>
+                                <ul class="service-features">
+                                    <li>Google Scholar Integration</li>
+                                    <li>Publication Auto-Update</li>
+                                    <li>Responsive Design</li>
+                                    <li>SEO Optimized</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">👥</div>
+                                <h3>Research Group Portals</h3>
+                                <p>Comprehensive websites for labs and research groups featuring team management and project showcases.</p>
+                                <ul class="service-features">
+                                    <li>Team Member Profiles</li>
+                                    <li>Project Galleries</li>
+                                    <li>News & Updates</li>
+                                    <li>Collaboration Tools</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">🎓</div>
+                                <h3>Postdoc Portfolios</h3>
+                                <p>Stand out in your postdoc applications with a striking portfolio website highlighting your achievements.</p>
+                                <ul class="service-features">
+                                    <li>Interactive CV</li>
+                                    <li>Research Highlights</li>
+                                    <li>Teaching Portfolio</li>
+                                    <li>Contact Integration</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">🚀</div>
+                                <h3>Custom Solutions</h3>
+                                <p>Need something unique? We build custom academic platforms tailored to your specific requirements.</p>
+                                <ul class="service-features">
+                                    <li>Database Integration</li>
+                                    <li>Custom Features</li>
+                                    <li>API Development</li>
+                                    <li>Ongoing Maintenance</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +223,86 @@
             <div class="splide" id="portfolioSlider">
                 <div class="splide__track">
                     <ul class="splide__list" id="portfolioList">
-                        <!-- Portfolio loaded from JSON -->
+                        <li class="splide__slide">
+                            <div class="portfolio-item">
+                                <div class="portfolio-image" style="background-image: url('assets/images/portfolio-uoquantum.jpg')" role="img" aria-label="uOttawa Quantum website — official home for the University of Ottawa quantum computing community">
+                                    <div class="portfolio-placeholder">uOttawa Quantum</div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div>
+                                        <span class="portfolio-category">Student Organization Website</span>
+                                        <h3 class="portfolio-title">uOttawa Quantum</h3>
+                                        <p class="portfolio-description">Official home for the University of Ottawa's quantum computing community — club info, events, and the annual Qiskit Fall Fest, all in one place.</p>
+                                        <div class="portfolio-tags">
+                                            <span class="tag">Community</span>
+                                            <span class="tag">Quantum Computing</span>
+                                            <span class="tag">Student Org</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://uoquantum.com" class="portfolio-link" target="_blank" rel="noopener noreferrer">View Project Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="portfolio-item">
+                                <div class="portfolio-image" style="background-image: url('assets/images/portfolio-qiskitff26.jpg')" role="img" aria-label="Qiskit Fall Fest event website — schedules, workshops, and speaker lineups">
+                                    <div class="portfolio-placeholder">Qiskit Fall Fest</div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div>
+                                        <span class="portfolio-category">Event & Hackathon Landing Page</span>
+                                        <h3 class="portfolio-title">Qiskit Fall Fest</h3>
+                                        <p class="portfolio-description">A fast, mobile-responsive event site for uOttawa's Qiskit Fall Fest — schedules, workshops, and speaker lineups, built to handle high registration traffic without breaking a sweat.</p>
+                                        <div class="portfolio-tags">
+                                            <span class="tag">Event Site</span>
+                                            <span class="tag">High Traffic</span>
+                                            <span class="tag">Qiskit</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://uoquantum.github.io/QiskitFF26/" class="portfolio-link" target="_blank" rel="noopener noreferrer">View Project Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="portfolio-item">
+                                <div class="portfolio-image" style="background-image: url('assets/images/portfolio-pquip.jpg')" role="img" aria-label="PQUIP Research Group website — quantum computing, photonics, and quantum machine learning research">
+                                    <div class="portfolio-placeholder">PQUIP Research Group</div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div>
+                                        <span class="portfolio-category">Academic Research Group Portal</span>
+                                        <h3 class="portfolio-title">PQUIP Research Group</h3>
+                                        <p class="portfolio-description">An elegant, publication-ready site for the PQUIP research group at NRC and the University of Ottawa, showcasing quantum computing, photonics, and quantum machine learning research.</p>
+                                        <div class="portfolio-tags">
+                                            <span class="tag">Research Group</span>
+                                            <span class="tag">Quantum Photonics</span>
+                                            <span class="tag">Academic</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://utkarshh-singh.github.io/pquip-group-site/" class="portfolio-link" target="_blank" rel="noopener noreferrer">View Project Details</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="portfolio-item">
+                                <div class="portfolio-image" style="background-image: url('assets/images/portfolio-personal.jpg')" role="img" aria-label="Personal researcher portfolio website — quantum machine learning researcher">
+                                    <div class="portfolio-placeholder">Personal Researcher Portfolio</div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div>
+                                        <span class="portfolio-category">Personal Branding & Portfolio</span>
+                                        <h3 class="portfolio-title">Personal Researcher Portfolio</h3>
+                                        <p class="portfolio-description">A lightweight, meticulously crafted personal portfolio for a quantum machine learning researcher — clean typography, deliberate structure, zero bloat.</p>
+                                        <div class="portfolio-tags">
+                                            <span class="tag">Portfolio</span>
+                                            <span class="tag">Personal Branding</span>
+                                            <span class="tag">Frontend</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://utkarshh-singh.github.io/" class="portfolio-link" target="_blank" rel="noopener noreferrer">View Project Details</a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +317,34 @@
                 <p class="section-subtitle">From concept to launch in simple steps</p>
             </div>
             <div class="process-timeline" id="processTimeline">
-                <!-- Process loaded from JSON -->
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>We discuss your research, goals, and vision for your online presence.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design</h3>
+                        <p>Our team creates a stunning, custom design tailored to your field and style.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>We build your website with modern technology, ensuring speed and reliability.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Launch</h3>
+                        <p>Your website goes live, and we provide training and ongoing support.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,7 +356,30 @@
                 <h2 class="section-title">What <span class="gradient-text">Researchers</span> Say</h2>
             </div>
             <div class="testimonials-grid" id="testimonialsGrid">
-                <!-- Testimonials loaded from JSON -->
+                <div class="testimonial-card glass-card">
+                    <div class="quote-mark">"</div>
+                    <p>When organizing a large-scale technical hackathon like the Qiskit Fall Fest, having a rock-solid website was non-negotiable. The site loaded incredibly fast, handled high registration traffic without a single hiccup, and attendees constantly complimented the smooth UI.</p>
+                    <div class="testimonial-author">
+                        <strong>Lead Organizer</strong>
+                        <span>Qiskit Fall Fest, University of Ottawa</span>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="quote-mark">"</div>
+                    <p>Academic and research group websites are notoriously difficult to get right — they need to be highly professional and structured without looking cluttered. This site beautifully showcases our publications, team, and research, striking the perfect balance between cutting-edge technology and clean academic aesthetics.</p>
+                    <div class="testimonial-author">
+                        <strong>Prof. Khabat Heshami</strong>
+                        <span>Principal Investigator, PQUIP Group, NRC & University of Ottawa</span>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="quote-mark">"</div>
+                    <p>Your personal portfolio is your digital handshake, and this is the gold standard — clean layout, modern typography, and deliberate structure. The code behind it is lightweight, well-optimized, and demonstrates an elite understanding of modern web standards.</p>
+                    <div class="testimonial-author">
+                        <strong>Tech Lead</strong>
+                        <span>Industry Peer Review</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -142,23 +389,49 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info" id="contactInfo">
-                    <!-- Contact info loaded from JSON -->
+                    <h2>Let's Create Something <span class="gradient-text">Amazing</span></h2>
+                    <p>Ready to elevate your research presence? Get in touch with us today and let's discuss your project.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info.cadmic@gmail.com" class="contact-link" target="_blank" rel="noopener noreferrer">info.cadmic@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔗</span>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <p><a href="https://ca.linkedin.com/company/cadmic" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/company/cadmic</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Location</strong>
+                                <p><span class="contact-text">Virtual</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <form class="contact-form glass-card" 
+                <form class="contact-form glass-card"
                       id="contactForm"
-                      action="https://formspree.io/f/mkgqavvw" 
+                      action="https://formspree.io/f/mkgqavvw"
                       method="POST">
-                    
+
                     <!-- Formspree configuration -->
                     <input type="hidden" name="_subject" value="New Contact from Cadmic Website">
 
-                    
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="text" name="affiliation" placeholder="Institution/Affiliation">
                     <select name="service" required id="serviceSelect">
                         <option value="">Select Service</option>
-                        <!-- Options loaded from JSON -->
+                        <option value="1">Personal Research Websites</option>
+                        <option value="2">Research Group Portals</option>
+                        <option value="3">Postdoc Portfolios</option>
+                        <option value="4">Custom Solutions</option>
                     </select>
                     <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
                     <button type="submit" class="btn btn-large btn-glow">Send Message</button>
@@ -169,7 +442,39 @@
 
     <!-- Footer -->
     <footer class="footer" id="footer">
-        <!-- Footer loaded from JSON -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">Cadmic</span>
+                        <span class="logo-dot">.</span>
+                    </div>
+                    <p>Empowering researchers with modern web solutions</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#services">Personal Websites</a>
+                        <a href="#services">Research Groups</a>
+                        <a href="#services">Postdoc Portfolios</a>
+                        <a href="#services">Custom Solutions</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#process">Our Process</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cadmic. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://ca.linkedin.com/company/cadmic" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.instagram.com/cadmic.site/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts - DO NOT CHANGE ORDER -->
@@ -178,5 +483,8 @@
     <script src="js/dataLoader.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="feedback/feedback.js"></script>
 </body>
 </html>

@@ -2,48 +2,39 @@
   "projects": [
     {
       "id": 1,
-      "title": "Dr. Sarah Smith - Quantum Physics",
-      "category": "Personal Research Website",
-      "description": "Clean, modern site with Google Scholar integration and publication management",
-      "image": "assets/portfolio/ss1.png",
-      "url": "#",
-      "tags": ["Research", "Physics", "Publications"]
+      "title": "uOttawa Quantum",
+      "category": "Student Organization Website",
+      "description": "Official home for the University of Ottawa's quantum computing community — club info, events, and the annual Qiskit Fall Fest, all in one place.",
+      "image": "assets/images/portfolio-uoquantum.jpg",
+      "url": "https://uoquantum.com",
+      "tags": ["Community", "Quantum Computing", "Student Org"]
     },
     {
       "id": 2,
-      "title": "AI Research Lab - MIT",
-      "category": "Research Group Portal",
-      "description": "Comprehensive lab website with team management and project showcases",
-      "image": "assets/portfolio/ss2.png",
-      "url": "#",
-      "tags": ["Lab", "AI", "Team Portal"]
+      "title": "Qiskit Fall Fest",
+      "category": "Event & Hackathon Landing Page",
+      "description": "A fast, mobile-responsive event site for uOttawa's Qiskit Fall Fest — schedules, workshops, and speaker lineups, built to handle high registration traffic without breaking a sweat.",
+      "image": "assets/images/portfolio-qiskitff26.jpg",
+      "url": "https://uoquantum.github.io/QiskitFF26/",
+      "tags": ["Event Site", "High Traffic", "Qiskit"]
     },
     {
       "id": 3,
-      "title": "Dr. Michael Chen Portfolio",
-      "category": "Postdoc Portfolio",
-      "description": "Interactive CV and research showcase for postdoc applications",
-      "image": "assets/portfolio/ss3.png",
-      "url": "#",
-      "tags": ["Postdoc", "Portfolio", "CV"]
+      "title": "PQUIP Research Group",
+      "category": "Academic Research Group Portal",
+      "description": "An elegant, publication-ready site for the PQUIP research group at NRC and the University of Ottawa, showcasing quantum computing, photonics, and quantum machine learning research.",
+      "image": "assets/images/portfolio-pquip.jpg",
+      "url": "https://utkarshh-singh.github.io/pquip-group-site/",
+      "tags": ["Research Group", "Quantum Photonics", "Academic"]
     },
     {
       "id": 4,
-      "title": "Neuroscience Department",
-      "category": "Department Website",
-      "description": "Full-featured academic department portal with course management",
-      "image": "assets/portfolio/ss4.png",
-      "url": "#",
-      "tags": ["Department", "Neuroscience", "Academic"]
-    },
-    {
-      "id": 5,
-      "title": "Dr. Emily Rodriguez - CERN",
-      "category": "Personal Research Website",
-      "description": "Advanced researcher profile with interactive data visualization",
-      "image": "assets/portfolio/project-5.jpg",
-      "url": "#",
-      "tags": ["Research", "Physics", "CERN"]
+      "title": "Personal Researcher Portfolio",
+      "category": "Personal Branding & Portfolio",
+      "description": "A lightweight, meticulously crafted personal portfolio for a quantum machine learning researcher — clean typography, deliberate structure, zero bloat.",
+      "image": "assets/images/portfolio-personal.jpg",
+      "url": "https://utkarshh-singh.github.io/",
+      "tags": ["Portfolio", "Personal Branding", "Frontend"]
     }
   ]
 }

@@ -194,26 +194,45 @@ class DataLoader {
   }
 
   populateContact() {
-    const contactInfo = document.getElementById('contactInfo');
-    if (!contactInfo || !this.data.siteInfo) return;
+  const contactInfo = document.getElementById('contactInfo');
+  if (!contactInfo || !this.data.siteInfo) return;
 
-    const contact = this.data.siteInfo.contact;
-    contactInfo.innerHTML = `
-      <h2>${contact.title}</h2>
-      <p>${contact.description}</p>
-      <div class="contact-details">
-        ${contact.details.map(detail => `
+  const contact = this.data.siteInfo.contact;
+  
+  contactInfo.innerHTML = `
+    <h2>${contact.title}</h2>
+    <p>${contact.description}</p>
+    <div class="contact-details">
+      ${contact.details.map(detail => {
+        let href = '';
+        
+        if (detail.label === 'Email') {
+          href = `mailto:${detail.value}`;
+        } else if (detail.label === 'LinkedIn') {
+          href = detail.value.startsWith('http') ? detail.value : `https://${detail.value}`;
+        } else if (detail.label === 'Location') {
+          href = '#';
+        }
+        
+        return `
           <div class="contact-item">
             <span class="contact-icon">${detail.icon}</span>
             <div>
               <strong>${detail.label}</strong>
-              <p>${detail.value}</p>
+              <p>
+                ${href !== '#' 
+                  ? `<a href="${href}" class="contact-link" target="_blank" rel="noopener noreferrer">${detail.value}</a>`
+                  : `<span class="contact-text">${detail.value}</span>`
+                }
+              </p>
             </div>
           </div>
-        `).join('')}
-      </div>
-    `;
-  }
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
 
   populateFooter() {
     const footer = document.getElementById('footer');

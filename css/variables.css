@@ -1,5 +1,9 @@
+/* ===================================
+   CSS VARIABLES - Theme System
+   =================================== */
+
 :root {
-  /* Brand Colors - EDIT THESE TO CHANGE COLORS */
+  /* Dark Mode Colors (Default) */
   --primary-color: #0066CC;
   --secondary-color: #00D4FF;
   --accent-color: #4DD0E1;
@@ -7,8 +11,10 @@
   --darker-bg: #050D18;
   --light-text: #FFFFFF;
   --gray-text: #B0BEC5;
+  --card-bg: rgba(10, 25, 41, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
   
-  /* Typography - EDIT THESE TO CHANGE FONTS */
+  /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   
@@ -17,7 +23,7 @@
   --font-size-h3: 1.75rem;
   --font-size-body: 1.1rem;
   
-  /* Spacing - EDIT THESE TO CHANGE LAYOUT */
+  /* Spacing */
   --section-padding: 100px;
   --container-max-width: 1200px;
   
@@ -26,6 +32,34 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --transition-speed: 0.3s;
   --hover-lift: translateY(-10px);
+}
+
+/* ===================================
+   LIGHT MODE COLORS - Softer Design
+   =================================== */
+
+[data-theme="light"] {
+  --primary-color: #0056B3;
+  --secondary-color: #00A8CC;
+  --accent-color: #00BCD4;
+  
+  /* Softer backgrounds - not pure white */
+  --dark-bg: #F0F4F8;           /* Soft blue-gray instead of white */
+  --darker-bg: #FAFBFC;         /* Very light gray instead of white */
+  --light-text: #2D3748;        /* Darker text for readability */
+  --gray-text: #4A5568;
+  
+  /* Better cards with subtle shadows */
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 102, 204, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 102, 204, 0.2);
+}
+
+
+/* Smooth transition for theme change */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Responsive Typography */

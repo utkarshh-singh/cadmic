@@ -25,7 +25,7 @@
       { "text": "View Our Work", "href": "#portfolio", "type": "outline" }
     ],
     "stats": [
-      { "number": "500+", "label": "Researchers Empowered" },
+      { "number": "10+", "label": "Researchers Empowered" },
       { "number": "100%", "label": "Client Satisfaction" },
       { "number": "24/7", "label": "Support Available" }
     ]
@@ -70,20 +70,11 @@
           { "text": "Our Process", "href": "#process" },
           { "text": "Contact", "href": "#contact" }
         ]
-      },
-      {
-        "title": "Resources",
-        "links": [
-          { "text": "Blog", "href": "#" },
-          { "text": "Documentation", "href": "#" },
-          { "text": "Support", "href": "#" }
-        ]
       }
     ],
     "social": [
-      { "name": "GitHub", "url": "https://github.com/cadmic" },
       { "name": "LinkedIn", "url": "https://ca.linkedin.com/company/cadmic" },
-      { "name": "Twitter", "url": "https://twitter.com/cadmic" }
+      { "name": "Instagram", "url": "https://www.instagram.com/cadmic.site/" }
     ],
     "copyright": "2025 Cadmic. All rights reserved."
   }

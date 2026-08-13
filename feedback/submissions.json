@@ -1,0 +1,24 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Example testimonial from feedback form",
+      "author": "Dr. Jane Smith",
+      "position": "Postdoc, Stanford University",
+      "image": "",
+      "date_submitted": "2025-10-21"
+    }
+  ],
+  "portfolio_projects": [
+    {
+      "id": 1,
+      "title": "Dr. Jane Smith - Quantum Physics",
+      "category": "Personal Research Website",
+      "description": "Clean, modern site with Google Scholar integration",
+      "image": "assets/portfolio/project-1.jpg",
+      "url": "https://example.com",
+      "tags": ["Research", "Physics", "Publications"],
+      "date_submitted": "2025-10-21"
+    }
+  ]
+}
