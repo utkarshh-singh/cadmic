@@ -62,28 +62,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       try {
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        
-        if (response.ok) {
-          contactForm.reset();
-          
-          if (submitBtn) {
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-          }
-          
-          showSuccessMessage(contactForm, '✓ Message sent successfully! We\'ll get back to you soon.');
-          
+        // Google Apps Script web apps don't return readable CORS headers, so
+        // we submit those opaquely (mode: 'no-cors') and treat a fetch that
+        // resolves without throwing as success. Formspree supports a normal
+        // readable response, so we still check response.ok there.
+        const isAppsScript = contactForm.action.includes('script.google.com');
+
+        if (isAppsScript) {
+          await fetch(contactForm.action, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+          });
         } else {
-          throw new Error('Form submission failed');
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (!response.ok) throw new Error('Form submission failed');
         }
-        
+
+        contactForm.reset();
+
+        if (submitBtn) {
+          submitBtn.textContent = 'Send Message';
+          submitBtn.disabled = false;
+        }
+
+        showSuccessMessage(contactForm, '✓ Message sent successfully! We\'ll get back to you soon.');
+
       } catch (error) {
         console.error('Error:', error);
         

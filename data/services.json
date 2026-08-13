@@ -47,6 +47,30 @@
         "API Development",
         "Ongoing Maintenance"
       ]
+    },
+    {
+      "id": 5,
+      "icon": "💼",
+      "title": "Personal Portfolios",
+      "description": "A clean, professional personal website — no research background required. Great for creatives, job seekers, and freelancers.",
+      "features": [
+        "Custom Design",
+        "Mobile Responsive",
+        "SEO Optimized",
+        "Fast Turnaround"
+      ]
+    },
+    {
+      "id": 6,
+      "icon": "🏪",
+      "title": "Small Business Websites",
+      "description": "An affordable, modern online presence for small businesses and local shops — built to bring in customers.",
+      "features": [
+        "Business Landing Pages",
+        "Contact & Booking Forms",
+        "Mobile-First Design",
+        "One-Time Affordable Fee"
+      ]
     }
   ]
 }

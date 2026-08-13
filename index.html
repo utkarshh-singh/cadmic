@@ -6,8 +6,8 @@
 
     <!-- Primary Meta Tags -->
     <title>Cadmic | Academic Web Design for Researchers & Postdocs</title>
-    <meta name="description" content="Cadmic builds beautiful, affordable academic websites for researchers, postdocs, and research groups — one-time fee, fast turnaround, SEO-optimized, hosted on GitHub Pages.">
-    <meta name="keywords" content="academic web design, researcher website, postdoc portfolio, research group website, lab website design, Ottawa web design">
+    <meta name="description" content="Cadmic builds beautiful, affordable websites for researchers, postdocs, and research groups — plus personal portfolios and small business sites. One-time fee, fast turnaround, SEO-optimized, hosted on GitHub Pages.">
+    <meta name="keywords" content="academic web design, researcher website, postdoc portfolio, research group website, lab website design, personal portfolio website, small business website design, affordable web design, Ottawa web design">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Cadmic">
     <meta name="theme-color" content="#0A1929" media="(prefers-color-scheme: dark)">
@@ -48,7 +48,7 @@
       "url": "https://www.cadmic.site/",
       "logo": "https://www.cadmic.site/assets/images/logo.png",
       "image": "https://www.cadmic.site/assets/og/cadmic-cover.png",
-      "description": "Cadmic builds beautiful, affordable academic websites for researchers, postdocs, and research groups — one-time fee, fast turnaround, hosted on GitHub Pages.",
+      "description": "Cadmic builds beautiful, affordable websites for researchers, postdocs, and research groups — plus personal portfolios and small business sites. One-time fee, fast turnaround, hosted on GitHub Pages.",
       "email": "info.cadmic@gmail.com",
       "areaServed": "Worldwide",
       "address": {
@@ -65,7 +65,9 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Research Websites" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Research Group Portals" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Postdoc Portfolios" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Academic Solutions" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Academic Solutions" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Portfolio Websites" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small Business Websites" } }
       ]
     }
     </script>
@@ -206,6 +208,32 @@
                                     <li>Custom Features</li>
                                     <li>API Development</li>
                                     <li>Ongoing Maintenance</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">💼</div>
+                                <h3>Personal Portfolios</h3>
+                                <p>A clean, professional personal website — no research background required. Great for creatives, job seekers, and freelancers.</p>
+                                <ul class="service-features">
+                                    <li>Custom Design</li>
+                                    <li>Mobile Responsive</li>
+                                    <li>SEO Optimized</li>
+                                    <li>Fast Turnaround</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="service-card glass-card">
+                                <div class="service-icon">🏪</div>
+                                <h3>Small Business Websites</h3>
+                                <p>An affordable, modern online presence for small businesses and local shops — built to bring in customers.</p>
+                                <ul class="service-features">
+                                    <li>Business Landing Pages</li>
+                                    <li>Contact & Booking Forms</li>
+                                    <li>Mobile-First Design</li>
+                                    <li>One-Time Affordable Fee</li>
                                 </ul>
                             </div>
                         </li>
@@ -419,23 +447,40 @@
                 </div>
                 <form class="contact-form glass-card"
                       id="contactForm"
-                      action="https://formspree.io/f/mkgqavvw"
+                      action="https://script.google.com/macros/s/AKfycbwqfoE1gGdbhiCO2mlZH3po94EpRc6NuzUeCUA1FDFobzDKiUzBT8sT3psgU9RTp_gBcw/exec"
                       method="POST">
-
-                    <!-- Formspree configuration -->
-                    <input type="hidden" name="_subject" value="New Contact from Cadmic Website">
 
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="affiliation" placeholder="Institution/Affiliation">
+                    <input type="tel" name="phone" placeholder="Phone Number (optional)">
+                    <input type="text" name="affiliation" placeholder="Institution / Company (optional)">
                     <select name="service" required id="serviceSelect">
                         <option value="">Select Service</option>
                         <option value="1">Personal Research Websites</option>
                         <option value="2">Research Group Portals</option>
                         <option value="3">Postdoc Portfolios</option>
                         <option value="4">Custom Solutions</option>
+                        <option value="5">Personal Portfolios</option>
+                        <option value="6">Small Business Websites</option>
                     </select>
-                    <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    <select name="budget" required id="budgetSelect">
+                        <option value="">Select Budget</option>
+                        <option value="$50 - Simple single-page site">Starting at $50 — Simple single-page site</option>
+                        <option value="$100 - Multi-page website">Starting at $100 — Multi-page website</option>
+                        <option value="$200 - Multi-page + Google Scholar auto-sync">Starting at $200 — Multi-page + Google Scholar auto-sync</option>
+                        <option value="$500 - Small business website">Starting at $500 — Small business website</option>
+                        <option value="$1000+ - Custom project">$1,000+ — Custom project</option>
+                        <option value="Not sure - need a quote">Not sure yet — help me decide</option>
+                    </select>
+                    <select name="timeline" id="timelineSelect">
+                        <option value="">When do you need this live? (optional)</option>
+                        <option value="ASAP (within 1 week)">ASAP (within 1 week)</option>
+                        <option value="Within 2-4 weeks">Within 2-4 weeks</option>
+                        <option value="1-2 months">1-2 months</option>
+                        <option value="Just exploring, no rush">Just exploring, no rush</option>
+                    </select>
+                    <input type="text" name="existingWebsite" placeholder="Current website URL, if you have one (optional)">
+                    <textarea name="message" placeholder="Tell us about your project — what pages/sections do you need? Do you have your content, photos, or CV ready? Any websites whose style you like?" rows="5" required></textarea>
                     <button type="submit" class="btn btn-large btn-glow">Send Message</button>
                 </form>
             </div>
@@ -460,6 +505,8 @@
                         <a href="#services">Research Groups</a>
                         <a href="#services">Postdoc Portfolios</a>
                         <a href="#services">Custom Solutions</a>
+                        <a href="#services">Personal Portfolios</a>
+                        <a href="#services">Small Business Websites</a>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
