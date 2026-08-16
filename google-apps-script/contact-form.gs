@@ -14,8 +14,19 @@ var SERVICE_LABELS = {
 var NOTIFY_EMAIL = 'info.cadmic@gmail.com';
 
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   var data = e.parameter;
+
+  // Honeypot: real users never see or fill this field (it's hidden off-screen).
+  // Bots that submit directly to this URL, bypassing the site's JS entirely,
+  // still get caught here. Respond with the normal success shape so we don't
+  // tip them off — just skip saving the row and sending the email.
+  if (data.website_url) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   var serviceLabel = SERVICE_LABELS[data.service] || data.service || '';
 
   sheet.appendRow([

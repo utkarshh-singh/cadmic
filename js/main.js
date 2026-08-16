@@ -55,7 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const formData = new FormData(contactForm);
-      
+
+      // Honeypot: real users never see or fill this field. If it's filled,
+      // silently pretend to succeed without ever hitting the network.
+      if (formData.get('website_url')) {
+        contactForm.reset();
+        showSuccessMessage(contactForm, '✓ Message sent successfully! We\'ll get back to you soon.');
+        return;
+      }
+
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;

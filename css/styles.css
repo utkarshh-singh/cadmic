@@ -928,6 +928,15 @@ section {
   padding: 40px;
 }
 
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
