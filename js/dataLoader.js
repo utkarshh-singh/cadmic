@@ -154,7 +154,9 @@ class DataLoader {
                 ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
               </div>
             </div>
-            <a href="${project.url}" class="portfolio-link">View Project Details</a>
+            ${project.concept
+              ? `<span class="portfolio-link portfolio-link--concept">Concept Design</span>`
+              : `<a href="${project.url}" class="portfolio-link">View Project Details</a>`}
           </div>
         </div>
       </li>

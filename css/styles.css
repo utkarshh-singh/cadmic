@@ -711,6 +711,20 @@ section {
   transform: translateX(5px);
 }
 
+.portfolio-link--concept {
+  cursor: default;
+  color: var(--gray-text);
+}
+
+.portfolio-link--concept::after {
+  content: '';
+}
+
+.portfolio-link--concept:hover {
+  gap: 8px;
+  text-shadow: none;
+}
+
 /* Portfolio Overlay - Remove old version */
 .portfolio-overlay {
   display: none;

@@ -35,6 +35,46 @@
       "image": "assets/images/portfolio-personal.jpg",
       "url": "https://utkarshh-singh.github.io/",
       "tags": ["Portfolio", "Personal Branding", "Frontend"]
+    },
+    {
+      "id": 5,
+      "title": "Maren Voss — Creative Director",
+      "category": "Concept · Personal Portfolio",
+      "description": "An editorial, brutalist-inspired portfolio concept for a fashion and brand creative director — oversized type, high contrast, magazine energy.",
+      "image": "assets/images/portfolio-concept-fashion.jpg",
+      "url": "#",
+      "concept": true,
+      "tags": ["Concept", "Fashion", "Editorial"]
+    },
+    {
+      "id": 6,
+      "title": "Ashfield & Co. Roasters",
+      "category": "Concept · Small Business",
+      "description": "A warm, artisanal brand concept for a specialty coffee roastery — direct-trade storytelling built to sell the craft, not just the product.",
+      "image": "assets/images/portfolio-concept-coffee.jpg",
+      "url": "#",
+      "concept": true,
+      "tags": ["Concept", "Small Business", "E-commerce"]
+    },
+    {
+      "id": 7,
+      "title": "Nome Studio",
+      "category": "Concept · Business Portfolio",
+      "description": "A minimal, monochrome concept for an architecture and interiors practice — restrained typography and generous whitespace over ornament.",
+      "image": "assets/images/portfolio-concept-architecture.jpg",
+      "url": "#",
+      "concept": true,
+      "tags": ["Concept", "Architecture", "Minimal"]
+    },
+    {
+      "id": 8,
+      "title": "Nova Wreck — Producer/DJ",
+      "category": "Concept · Personal Portfolio",
+      "description": "A high-energy, neon-lit concept for an electronic music artist — bold gradients and motion built for a nightlife audience.",
+      "image": "assets/images/portfolio-concept-music.jpg",
+      "url": "#",
+      "concept": true,
+      "tags": ["Concept", "Music", "Bold Design"]
     }
   ]
 }
